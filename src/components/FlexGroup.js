@@ -63,8 +63,8 @@ const FlexGroup = ({
     let container = useCallback(() => {
         let flexDirection = column ? 'column' : row && 'row'
         let flexWrap = wrapReverse ? 'wrap-reverse' : wrap && 'wrap'
-        let newCenterY = center || centerY ? 'center' : justifyConfig[justifyContent]
-        let newCenterX = center || centerX ? 'center' : alignConfig[alignItems]
+        let newCenterY = center || centerY ? 'center' : alignConfig[justifyContent]
+        let newCenterX = center || centerX ? 'center' : justifyConfig[alignItems]
         let aContent = contentConfig[alignContent]
 
         return styled(tagName)`
@@ -93,15 +93,15 @@ const FlexGroup = ({
                      `}
 
                  // justify-content
-                 ${newCenterY &&
+                 ${newCenterX &&
                      css`
-                         justify-content: ${newCenterY};
+                         justify-content: ${newCenterX};
                      `}
 
                  // align-items
-                 ${newCenterX &&
+                 ${newCenterY &&
                      css`
-                         align-items: ${newCenterX};
+                         align-items: ${newCenterY};
                      `}
 
                  // align-content
