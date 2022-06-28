@@ -1,27 +1,18 @@
 {
-  "env": {
-    "test": {
-      "presets": [
-        [
-          "@babel/preset-env"
-        ],
-        "@babel/preset-react"
-      ]
-    }
-  },
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": false
-      }
-    ],
-    ["@babel/preset-react", {"runtime": "automatic"}]
-  ],
-  "ignore": [
-    "node_modules/**"
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    "jest"
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime"
+    [
+      "import",
+      {
+        "libraryName": "@material-ui/core",
+        "libraryDirectory": "components", // default: lib
+        "camel2DashComponentName": false // default: true
+      }
+    ]
   ]
 }

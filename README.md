@@ -3,8 +3,7 @@
     <a href="https://github.com/delpikye-v/react-flexbox">react-flexbox-z</a>
     <br />
     <br />
-    <b><a href="https://codesandbox.io/s/x544l">LIVE EXAMPLE</a>
-    </b>
+    <b><a href="https://codesandbox.io/s/x544l">LIVE EXAMPLE</a></b>
 </div>
 
 ---
@@ -13,7 +12,7 @@
 
 Simple react components flexbox (css)
 
-Quick
+Quick (styled-components)
 
 ---
 ### Usage
@@ -31,11 +30,22 @@ import { FlexItem, FlexGroup } from "react-flexbox-z";
 ```
 
 #### Snippet
+```js
+<FlexGroup<"div"> tagName="div">
+</FlexGroup>
+
+// default div
+<FlexGroup>
+</FlexGroup>
+```
 
 ---
 
 
 #### props
+
+see d.ts
+
 
 | props                | type                          | description                                                                |
 |----------------------|-------------------------------|----------------------------------------------------------------------------|
@@ -50,7 +60,7 @@ Todo:
 
 #### RUN
 
-<b><a href="https://codesandbox.io/s/x544l">LIVE EXAMPLE</a>
+<b><a href="https://codesandbox.io/u/delpi.k">LIVE EXAMPLE</a>
 
 <br />
 
