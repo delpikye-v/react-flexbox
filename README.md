@@ -1,126 +1,145 @@
-<div align="center">
-    <h1>react-flexbox-z</h1>
-    <a href="https://github.com/delpikye-v/react-flexbox-z">react-flexbox-z</a>
-    <br />
-    <b><a href="https://codesandbox.io/s/x544l">LIVE EXAMPLE</a></b>
-</div>
+# react-flexbox-z
 
-<br />
+[![NPM](https://img.shields.io/npm/v/react-flexbox-z.svg)](https://www.npmjs.com/package/react-flexbox-z)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![downloads](https://img.shields.io/npm/dt/react-flexbox-z.svg)
 
 
-[![npm](https://img.shields.io/npm/v/react-flexbox-z.svg)](https://www.npmjs.com/package/react-flexbox-z) ![downloads](https://img.shields.io/npm/dt/react-flexbox-z.svg)
-
----
-
-#### Description
 + Wrapper for [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
 + Quick styled-components
 + Support tag: `div`, `nav`, `main`, `aside`, `article`, `header`, `section`, `footer`
 
 ---
-#### Usage
 
-Install the package
+## 🚀 Live Demo
 
-```js
-npm install react-flexbox-z
-```
+👉 [Codesandbox](https://codesandbox.io/s/x544l)
 
-Import the module in the place you want to use:
-```js
-import Flex from "react-flexbox-z";
-
-```
-
-#### Snippet
-
-```js
-<Flex as='main'>
-  This is a simple
-</Flex>
-```
-
-```js
-<Flex column alignItemsCenter>
-  <Flex.Item>
-    This is child
-  </Flex.Item>
-  ... more
-</Flex>
-```
 ---
 
-#### Props
+## 🚀 Features
+- ⚡ Simple **Flexbox wrapper** using `styled-components`.
+- 🔥 Quick utility props (`row`, `column`, `justifyCenter`, etc.).
+- 🏷️ Supports semantic tags: `div`, `nav`, `main`, `aside`, `article`, `header`, `section`, `footer`.
+- 🎯 Includes `Flex.Item` for child element control.
 
-###### [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-```js
-// =====================================================
+---
+
+## 📦 Installation
+
+```bash
+npm install react-flexbox-z
+# or
+yarn add react-flexbox-z
+```
+
+---
+
+## 🎬 Usage
+
+```tsx
+import Flex from "react-flexbox-z";
+
+export default function App() {
+  return (
+    <Flex as="main" column alignItemsCenter justifyCenter>
+      <h1>Hello Flexbox</h1>
+      <Flex.Item grow>
+        <p>This is a child that grows</p>
+      </Flex.Item>
+      <Flex.Item>
+        <button>Click me</button>
+      </Flex.Item>
+    </Flex>
+  );
+}
+```
+
+---
+
+## 🔧 Examples
+
+### 1. Basic row layout
+```tsx
+<Flex row justifySpaceBetween alignItemsCenter>
+  <Flex.Item>Left</Flex.Item>
+  <Flex.Item>Right</Flex.Item>
+</Flex>
+```
+
+### 2. Column centered
+```tsx
+<Flex column alignItemsCenter justifyCenter style={{ height: "100vh" }}>
+  <Flex.Item>Centered Item 1</Flex.Item>
+  <Flex.Item>Centered Item 2</Flex.Item>
+</Flex>
+```
+
+### 3. Wrap items
+```tsx
+<Flex wrap gap="16px">
+  <Flex.Item basis="120px">Box 1</Flex.Item>
+  <Flex.Item basis="120px">Box 2</Flex.Item>
+  <Flex.Item basis="120px">Box 3</Flex.Item>
+  <Flex.Item basis="120px">Box 4</Flex.Item>
+</Flex>
+```
+
+### 4. Flexible growth
+```tsx
+<Flex row>
+  <Flex.Item grow={1}>Sidebar</Flex.Item>
+  <Flex.Item grow={3}>Content</Flex.Item>
+</Flex>
+```
+
+---
+
+## 📚 API
+
+### `<Flex />`
+
+```tsx
 <Flex row />
 <Flex column />
-<Flex rowReverse /> // flex-direction: row-reverse;
-<Flex columnReverse /> // flex-direction: column-reverse;
-
-// wrap
-<Flex flexWrap='nowrap' />
-<Flex wrap /> // flex-wrap: wrap;
-<Flex noWrap /> // flex-wrap: nowrap;
-<Flex wrapReverse /> // flex-wrap: wrap-reverse;
-
-// justify
-<Flex justifyContent='center' />
-<Flex justifyStart /> // justify-content: flex-start;
-<Flex justifyEnd /> // justify-content: flex-end;
-<Flex justifyCenter /> // justify-content: center;
-<Flex justifySpaceBetween /> // justify-content: space-between;
-<Flex justifySpaceAround /> // justify-content: space-around;
-
-<Flex alignItems='baseline' />
-<Flex alignItemsStart /> // align-items: flex-start;
-<Flex alignItemsEnd /> // align-items: flex-end;
-<Flex alignItemsCenter /> // align-items: center;
-<Flex alignItemsBaseline /> // align-items: baseline;
-<Flex alignItemsStretch /> // align-items: stretch;
-
-<Flex alignContent='flex-end' />
-<Flex alignContentStart /> // align-content: flex-start;
-<Flex alignContentEnd /> // align-content: flex-end;
-<Flex alignContentCenter /> // align-content: center;
-<Flex alignContentSpaceBetween /> // align-content: space-between;
-<Flex alignContentSpaceAround /> // align-content: space-around;
-<Flex alignContentStretch /> // align-content: stretch;
+<Flex wrap />
+<Flex justifyCenter />
+<Flex alignItemsStretch />
 ```
 
+##### 🔧 Props (shortcuts):
 
-###### [flexbox-item](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- **Direction**: `row`, `column`, `rowReverse`, `columnReverse`
+- **Wrap**: `wrap`, `noWrap`, `wrapReverse`
+- **Justify**: `justifyStart`, `justifyEnd`, `justifyCenter`, `justifySpaceBetween`, `justifySpaceAround`
+- **Align Items**: `alignItemsStart`, `alignItemsEnd`, `alignItemsCenter`, `alignItemsBaseline`, `alignItemsStretch`
+- **Align Content**: `alignContentStart`, `alignContentEnd`, `alignContentCenter`, `alignContentSpaceBetween`, `alignContentSpaceAround`, `alignContentStretch`
 
-```js
-<Flex.Item />
-// =====================================================
-order, // 'order'
-grow, // 'flex-grow'
-shrink, // 'flex-shrink'
-basis, // 'flex-basis'
-flex, // 'flex'
-alignSelfAuto, // 'align-self'
-alignSelfStart, // align-self: start;
-alignSelfEnd, // align-self: end;
-alignSelfCenter, // align-self: center;
-alignSelfBaseline, // align-self: baseline;
-alignSelfStretch, // align-self: stretch;
-alignSelf, // 'align-self' manual
+---
+
+### `<Flex.Item />`
+```tsx
+<Flex.Item grow={1} basis="50%" alignSelfCenter>
+  Child
+</Flex.Item>
 ```
 
-#### Note
-See more d.ts
+##### 🔧 Props (shortcuts):
 
-<br />
+- `order`
+- `grow`
+- `shrink`
+- `basis`
+- `flex`
+- `alignSelf` (`auto`, `start`, `end`, `center`, `baseline`, `stretch`)
 
-#### RUN
+---
 
-<b><a href="https://codesandbox.io/s/x544l">LIVE EXAMPLE</a></a>
+## 📖 Notes
+- Check the **TypeScript typings** (`d.ts`) for all supported props.
+- Designed for **styled-components**.
 
-<br />
+---
 
-#### License
-
-MIT
+## 📜 License
+MIT - Delpi

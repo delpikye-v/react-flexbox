@@ -1,6 +1,6 @@
 {
   "name": "react-flexbox-z",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "React wrapper for flexbox",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -19,25 +19,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/delpikye-v/react-flexbox-z.git"
+    "url": "https://github.com/delpikye-v/react-flexbox.git"
   },
-  "homepage": "https://github.com/delpikye-v/react-flexbox-z#readme",
+  "homepage": "https://github.com/delpikye-v/react-flexbox#readme",
   "keywords": [
     "react",
-    "components",
     "flexbox",
     "flex",
-    "flex-layout",
     "layout",
+    "grid",
+    "ui",
+    "responsive",
+    "flex-container",
+    "flex-item",
+    "styled-components",
+    "react-layout",
     "react-flexbox",
-    "basic-flexbox",
-    "wrap-flexbox",
-    "react-library"
+    "flexbox-utilities",
+    "flex-utils",
+    "lightweight",
+    "typescript",
+    "design-system"
   ],
   "author": "Delpi.Kye",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/delpikye-v/react-flexbox-z/issues"
+    "url": "https://github.com/delpikye-v/react-flexbox/issues"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
