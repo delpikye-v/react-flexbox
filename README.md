@@ -1,8 +1,8 @@
-# react-flexbox-z
+## 📦 react-flexbox-z
 
-[![NPM](https://img.shields.io/npm/v/react-flexbox-z.svg)](https://www.npmjs.com/package/react-flexbox-z)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![downloads](https://img.shields.io/npm/dt/react-flexbox-z.svg)
+[![NPM](https://img.shields.io/npm/v/react-flexbox-z.svg)](https://www.npmjs.com/package/react-flexbox-z) ![downloads](https://img.shields.io/npm/dt/react-flexbox-z.svg)
+
+[LIVE EXAMPLE](https://codesandbox.io/s/x544l)
 
 
 + Wrapper for [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
@@ -11,13 +11,7 @@
 
 ---
 
-## 🚀 Live Demo
-
-👉 [Codesandbox](https://codesandbox.io/s/x544l)
-
----
-
-## 🚀 Features
+## Features
 - ⚡ Simple **Flexbox wrapper** using `styled-components`.
 - 🔥 Quick utility props (`row`, `column`, `justifyCenter`, etc.).
 - 🏷️ Supports semantic tags: `div`, `nav`, `main`, `aside`, `article`, `header`, `section`, `footer`.
@@ -25,7 +19,7 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install react-flexbox-z
@@ -35,7 +29,7 @@ yarn add react-flexbox-z
 
 ---
 
-## 🎬 Usage
+## Usage
 
 ```tsx
 import Flex from "react-flexbox-z";
@@ -57,9 +51,9 @@ export default function App() {
 
 ---
 
-## 🔧 Examples
+## Examples
 
-### 1. Basic row layout
+### Basic row layout
 ```tsx
 <Flex row justifySpaceBetween alignItemsCenter>
   <Flex.Item>Left</Flex.Item>
@@ -67,7 +61,7 @@ export default function App() {
 </Flex>
 ```
 
-### 2. Column centered
+### Column centered
 ```tsx
 <Flex column alignItemsCenter justifyCenter style={{ height: "100vh" }}>
   <Flex.Item>Centered Item 1</Flex.Item>
@@ -75,7 +69,7 @@ export default function App() {
 </Flex>
 ```
 
-### 3. Wrap items
+### Wrap items
 ```tsx
 <Flex wrap gap="16px">
   <Flex.Item basis="120px">Box 1</Flex.Item>
@@ -85,7 +79,7 @@ export default function App() {
 </Flex>
 ```
 
-### 4. Flexible growth
+### Flexible growth
 ```tsx
 <Flex row>
   <Flex.Item grow={1}>Sidebar</Flex.Item>
@@ -95,9 +89,9 @@ export default function App() {
 
 ---
 
-## 📚 API
+## API
 
-### `<Flex />`
+### Flex
 
 ```tsx
 <Flex row />
@@ -107,7 +101,7 @@ export default function App() {
 <Flex alignItemsStretch />
 ```
 
-##### 🔧 Props (shortcuts):
+**Props (shortcuts):**
 
 - **Direction**: `row`, `column`, `rowReverse`, `columnReverse`
 - **Wrap**: `wrap`, `noWrap`, `wrapReverse`
@@ -117,14 +111,14 @@ export default function App() {
 
 ---
 
-### `<Flex.Item />`
+### Flex.Item
 ```tsx
 <Flex.Item grow={1} basis="50%" alignSelfCenter>
   Child
 </Flex.Item>
 ```
 
-##### 🔧 Props (shortcuts):
+**Props (shortcuts):**
 
 - `order`
 - `grow`
@@ -135,11 +129,11 @@ export default function App() {
 
 ---
 
-## 📖 Notes
+## Notes
 - Check the **TypeScript typings** (`d.ts`) for all supported props.
 - Designed for **styled-components**.
 
 ---
 
-## 📜 License
-MIT - Delpi
+## License
+MIT
